@@ -81,7 +81,7 @@ void incrementation()
     cout << "c = " << c << endl;
 }
 
-void fonction maths()
+void fonction_maths()
 {
     //Besoin de include cmath
     double const nombre(16); //Le nombre dont on veut la racine
@@ -90,12 +90,61 @@ void fonction maths()
     resultat = sqrt(nombre);  //On effectue le calcul !
 
     cout << "La racine de " << nombre << " est " << resultat << endl;
+
+    //4 puissance 5
     double const a(4);
     double const b(5);
-    double const resultat = pow(a,b);
+    double const resultatBis = pow(a,b);
 
 }
 
+void condition ()
+{
+    int nbAnimaux(2);
+
+    if (nbAnimaux == 0)
+    {
+        cout << "Vous n'avez pas d'animaux de compagnie" << endl;
+    }
+    else if (nbAnimaux == 1)
+    {
+        cout << "C'est super d'avoir un fidele compagnon !" << endl;
+    }
+    else if (nbAnimaux == 2)
+    {
+        cout << "Ca doit en faire du monde a la maison !" << endl;
+    }
+    else
+    {
+        cout << "Votre budget croquettes doit etre important" << endl;
+    }
+
+    cout << "Fin du programme" << endl;
+}
+
+void switchEx ()
+{
+    int nbAnimaux(2);
+
+    switch (nbAnimaux)
+    {
+        case 0:
+            cout << "Vous n'avez pas d'animaux de compagnie" << endl;
+            break;
+
+        case 1:
+            cout << "C'est super d'avoir un fidele compagnon !" << endl;
+            break;
+
+        case 2:
+            cout << "Ca doit en faire du monde a la maison !" << endl;
+            break;
+
+        default:
+            cout << "Votre budget croquettes doit etre important" << endl;
+            break;
+    }
+}
 
 /*
 Fonction principale main
@@ -105,7 +154,9 @@ int main()
 {
     //basesDeProgrammation();
     //exerciceCalcul();
-    incrementation();
+    //incrementation();
+    condition();
+    switchEx();
 
     return 0;
 }
