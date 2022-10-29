@@ -163,6 +163,15 @@ void whileForEx ()
     }
 
 }
+
+/*
+Sert dans le cas ou on ne veut pas qu'une copie de notre variable soit strockée en memoire
+car elle représente un trop gros volume de donnees mais on ne veut pas non plus qu'elle puisse
+etre modifiee dans la fonction
+*/
+void passageParRefConstant (string const& texte) {
+}
+
 /*
 Fonction principale main
 Tous les programmes commencent par la fonction main
