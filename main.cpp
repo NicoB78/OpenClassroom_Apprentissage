@@ -1,13 +1,16 @@
 #include <iostream> // Inclut la bibliotheque iostream (affichage de texte)
 #include <string>
+#include <cmath>
 
 using namespace std; //Indique quel espace de noms on va utiliser
 
-void testReference(int& ref) {
+void testReference(int& ref)
+{
     ref = 3;
 }
 
-void basesDeProgrammation() {
+void basesDeProgrammation()
+{
     cout << "Hello world!" << endl << "Changement de ligne effectue" << endl;
     cout <<"Affichage backslash et guillemets  \" \\ " << endl;
     //Commentaire
@@ -56,7 +59,8 @@ void basesDeProgrammation() {
     int const nombreNiveaux(10);
 }
 
-void exerciceCalcul() {
+void exerciceCalcul()
+{
     cout << "Saisissez un premier nombre : " << endl;
     int premierNombre(0);
     cin >> premierNombre;
@@ -65,6 +69,34 @@ void exerciceCalcul() {
     cin >> deuxiemeNombre;
     cout << "Le resultat de la multiplication est : " << premierNombre*deuxiemeNombre << endl;
 }
+
+void incrementation()
+{
+    int a = 10;
+    int b, c;
+    b = a++;
+    c = ++a;
+    cout << "a = " << a << endl;
+    cout << "b = " << b << endl;
+    cout << "c = " << c << endl;
+}
+
+void fonction maths()
+{
+    //Besoin de include cmath
+    double const nombre(16); //Le nombre dont on veut la racine
+    //Comme sa valeur ne changera pas on met 'const'
+    double resultat;         //Une case mémoire pour stocker le résultat
+    resultat = sqrt(nombre);  //On effectue le calcul !
+
+    cout << "La racine de " << nombre << " est " << resultat << endl;
+    double const a(4);
+    double const b(5);
+    double const resultat = pow(a,b);
+
+}
+
+
 /*
 Fonction principale main
 Tous les programmes commencent par la fonction main
@@ -72,7 +104,8 @@ Tous les programmes commencent par la fonction main
 int main()
 {
     //basesDeProgrammation();
-    exerciceCalcul();
+    //exerciceCalcul();
+    incrementation();
 
     return 0;
 }
