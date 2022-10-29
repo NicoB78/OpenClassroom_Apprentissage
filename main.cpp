@@ -146,6 +146,23 @@ void switchEx ()
     }
 }
 
+void whileForEx ()
+{
+    int nbEnfants(0);
+
+    do
+    {
+        cout << "Combien d'enfants avez-vous ?" << endl;
+        cin >> nbEnfants;
+    } while (nbEnfants < 0);
+
+    cout << "Merci d'avoir indique un nombre d'enfants correct. Vous en avez " << nbEnfants << endl;
+    for (int compteur(0) ; compteur < 10 ; compteur++)
+    {
+        cout << compteur << endl;
+    }
+
+}
 /*
 Fonction principale main
 Tous les programmes commencent par la fonction main
@@ -155,8 +172,8 @@ int main()
     //basesDeProgrammation();
     //exerciceCalcul();
     //incrementation();
-    condition();
-    switchEx();
+    //condition();
+    //switchEx();
 
     return 0;
 }
