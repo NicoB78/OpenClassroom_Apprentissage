@@ -283,6 +283,46 @@ void stringTab()
 
 }
 
+void passagePointeur(int &age)
+{
+    age = 4;
+}
+
+void pointeur()
+{
+    //adresse 0 signifie qu'il ne contient l'adresse d'aucune case
+    int *ptr(0);
+    double *pointeurA(0);
+    unsigned int *pointeurB(0);
+    string *pointeurC(0);
+    vector<int> *pointeurD(0);
+    int const *pointeurE(0);
+
+    int ageUtilisateur(8);
+    //Adresse de ageUtilisateur dans le pointeur
+    ptr = &ageUtilisateur;
+    cout << "l'adresse de ageUtilisateur est " << &ageUtilisateur << endl;
+    cout << "La veleur de pointeur est : " << ptr << endl;
+    cout << "La valeur de la variable pointee est : " << *ptr << endl;
+
+    passagePointeur(*ptr);
+    cout << "Valeur modifiee de l'age est : " << *ptr << endl;
+
+    //allocation memoire d'un entier
+    //Notre pointeur pointe vers une case memoire de la taille d'un entier qui est non initialisee
+    int *pointeur(nullptr);
+    pointeur = new int;
+    if(pointeur) { //Verifie si le pointeur pointe vers une adresse memoire
+        cout << pointeur << endl;
+        *pointeur = 2;
+        delete pointeur;
+        pointeur = nullptr;
+    }
+
+
+
+}
+
 /*
 Fonction principale main
 Tous les programmes commencent par la fonction main
@@ -295,7 +335,8 @@ int main()
     //condition();
     //switchEx();
     //tableaux();
-    tableauxDynamiques();
+    //tableauxDynamiques();
+    pointeur();
     return 0;
 }
 
