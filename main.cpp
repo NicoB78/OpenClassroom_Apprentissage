@@ -1,6 +1,7 @@
 #include <iostream> // Inclut la bibliotheque iostream (affichage de texte)
 #include <string>
 #include <cmath>
+#include <vector>
 
 using namespace std; //Indique quel espace de noms on va utiliser
 
@@ -208,6 +209,42 @@ void passageParReferenceTableau(double tableau[])
 
 }
 
+//besoin de mettre un & pour le passage par reference avec les tableaux dynamiques
+void refTabDynamique(vector<double> const& a, vector<int> &b)
+{
+    b.push_back(9);
+}
+
+//besoin de #include <vector> pour utiliser ces tableaux
+void tableauxDynamiques()
+{
+    vector<int> tableau(5);
+    vector<int> tableauBis(5, 3); //tableau de 5 entiers valant tous 3
+    tableauBis.push_back(8); //On ajoute une 6 case au tableau avec comme valeur 8
+    tableauBis.pop_back(); //On enleve la derniere case du tableau donc le 8
+    int const tabBisSize = tableauBis.size();
+
+
+    vector<double> tabNote;
+    tabNote.push_back(14.3);
+    tabNote.push_back(15.6);
+    tabNote.push_back(13.2);
+    double moyenne(0.);
+
+    for(int i = 0; i < tabNote.size() ; i++) {
+        moyenne += tabNote[i];
+    }
+    moyenne /= tabNote.size();
+    cout << moyenne << endl;
+    refTabDynamique(tabNote, tableauBis);
+    for(int i = 0; i < tableauBis.size() ; i++) {
+        cout << tableauBis[i] << endl;
+    }
+
+}
+
+
+
 /*
 Fonction principale main
 Tous les programmes commencent par la fonction main
@@ -219,7 +256,8 @@ int main()
     //incrementation();
     //condition();
     //switchEx();
-    tableaux();
+    //tableaux();
+    tableauxDynamiques();
     return 0;
 }
 
