@@ -172,6 +172,42 @@ etre modifiee dans la fonction
 void passageParRefConstant (string const& texte) {
 }
 
+void tableaux ()
+{
+    int const tailleTableau(3);
+    double anglesTriangle[tailleTableau];
+
+    for(int i = 0 ; i < tailleTableau ; i++) {
+        anglesTriangle[i] = i;
+    }
+
+    int const nbrNote = 4;
+    double notes[nbrNote];
+    notes[0] = 15.;
+    notes[1] = 16.;
+    notes[2] = 12.;
+    notes[3] = 14.4;
+    double somme = 0;
+    double moyenne;
+
+    for(int i = 0; i < nbrNote ; i++) {
+        somme += notes[i];
+    }
+
+    moyenne = somme/nbrNote;
+    cout << moyenne << endl;
+
+
+
+}
+
+//Les valeurs du tableau seront bien changees pas besoin de mettre un & devant on agit deja sur sa case memoire
+void passageParReferenceTableau(double tableau[])
+{
+
+
+}
+
 /*
 Fonction principale main
 Tous les programmes commencent par la fonction main
@@ -183,7 +219,7 @@ int main()
     //incrementation();
     //condition();
     //switchEx();
-
+    tableaux();
     return 0;
 }
 
