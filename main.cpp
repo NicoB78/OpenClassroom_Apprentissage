@@ -243,7 +243,45 @@ void tableauxDynamiques()
 
 }
 
+void tableauMultiDimension()
+{
+    int tableauT[4][5];
+    int const tailleX = 5;
+    int const tailleY = 4;
+    int tableau[tailleX][tailleY];
 
+}
+
+//Pas trop utilisé car non optimisé
+void tabDynMultiDim()
+{
+    vector<vector<int> > grille;
+    grille.push_back(vector<int>(5));
+    grille.push_back(vector<int>(3,4));
+}
+
+void stringTab()
+{
+   string nomUtilisateur("Julien");
+   cout << "Vous etes " << nomUtilisateur << "." <<endl;
+
+   nomUtilisateur[0] = 'L';  //On modifie la première lettre
+   nomUtilisateur[2] = 'c';  //On modifie la troisième lettre
+
+   cout << "Ah non, vous etes " << nomUtilisateur << "!" << endl;
+
+   string prenom("Albert");
+   string nom("Einstein");
+
+   string total;    //Une chaîne vide
+   total += prenom; //On ajoute le prénom à la chaîne vide
+   total += " ";    //Puis un espace
+   total += nom;    //Et finalement le nom de famille
+
+   cout << "Vous vous appelez " << total << "." << endl;
+
+
+}
 
 /*
 Fonction principale main
